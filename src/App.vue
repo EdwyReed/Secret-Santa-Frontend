@@ -15,20 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-.header {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
+  color: white;
 }
 </style>

@@ -1,12 +1,11 @@
 <template>
   <HeaderChristmas />
   <ContainerCenter>
-    <div class="secret-santa-logo">
-      <img src="../assets/secret.png" alt="Secret" />
-      <img src="../assets/santa.png" alt="Santa" />
-    </div>
-    <BasicCard class="rounded-max" @click="goAuth" style="font-size: 4.3rem">
-      Начать
+    <BasicCard class="rounded-max" style="font-size: 3.5rem">
+      Хочу написать анкету
+    </BasicCard>
+    <BasicCard class="rounded-max" style="font-size: 3.5rem">
+      Хочу получить адрес
     </BasicCard>
   </ContainerCenter>
   <FooterChristmas />
@@ -26,19 +25,8 @@ export default {
     FooterChristmas,
     BasicCard,
   },
-  methods: {
-    goAuth() {
-      this.$router.push({ name: "sign-in" });
-    },
-  },
+  methods: {},
 };
 </script>
 
-<style lang="scss">
-.secret-santa-logo {
-  > img {
-    display: inline-block;
-    max-width: 30vw;
-  }
-}
-</style>
+<style lang="scss"></style>
