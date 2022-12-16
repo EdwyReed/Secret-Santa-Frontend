@@ -33,7 +33,7 @@ export default {
   methods: {
     goAuth() {
       const user = this.$store.getters["user"];
-      if (user === undefined) {
+      if (user === undefined || user === null) {
         this.$router.push({ name: "sign-in" });
       } else {
         this.$router.push({ name: "choose-role" });
