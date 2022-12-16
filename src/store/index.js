@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    user: JSON.parse(localStorage.getItem("user")) | undefined,
+    user: JSON.parse(localStorage.getItem("user")),
   },
   getters: {
     user: (state) => state.user,

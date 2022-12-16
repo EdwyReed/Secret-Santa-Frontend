@@ -21,6 +21,11 @@ const routes = [
     name: "pass-survey",
     component: () => import("@/views/SurveyView.vue"),
   },
+  {
+    path: "/survey-success",
+    name: "survey-success",
+    component: () => import("@/views/SuccessSurveyView.vue"),
+  },
 ];
 
 const router = createRouter({

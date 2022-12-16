@@ -1,14 +1,10 @@
 <template>
   <HeaderChristmas />
-  <ContainerCenter>
-    <BasicCard
-      class="rounded-max"
-      style="font-size: 3.5rem"
-      @click="passSurvey"
-    >
+  <ContainerCenter class="choose-role">
+    <BasicCard class="rounded-max pointer" @click="passSurvey">
       Хочу написать анкету
     </BasicCard>
-    <BasicCard class="rounded-max" style="font-size: 3.5rem" @click="sendGift">
+    <BasicCard class="rounded-max pointer inactive" @click="sendGift">
       Хочу получить адрес
     </BasicCard>
   </ContainerCenter>
@@ -41,4 +37,29 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.choose-role {
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 1040px) {
+  /* For mobile phones: */
+  .choose-role {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  /* For mobile phones: */
+  .choose-role {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  /* For mobile phones: */
+  .choose-role {
+    font-size: 2rem;
+  }
+}
+</style>

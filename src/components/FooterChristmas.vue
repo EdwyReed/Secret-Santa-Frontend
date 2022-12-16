@@ -11,7 +11,7 @@ export default {
 
 <style lang="scss">
 .footer {
-  position: absolute;
+  position: fixed;
   width: 30vw;
   bottom: 0;
 

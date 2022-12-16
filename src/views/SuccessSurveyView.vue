@@ -1,16 +1,18 @@
 <template>
   <HeaderChristmas />
-  <ContainerCenter style="gap: 0">
-    <div class="secret-santa-logo">
-      <img src="../assets/secret.png" alt="Secret" />
-      <img src="../assets/santa.png" alt="Santa" />
-    </div>
+  <ContainerCenter>
+    <BasicCard>
+      <span style="font-size: 3rem">
+        Вы успешно подали свою анкету на участие! <br />
+        Теперь можно расслабиться и праздновать, Тайный Санта придёт к вам!
+      </span>
+    </BasicCard>
     <BasicCard
       class="rounded-max pointer"
-      @click="goAuth"
-      style="font-size: 4.3rem"
+      style="font-size: 3rem"
+      @click="backToMain"
     >
-      Начать
+      В начало
     </BasicCard>
   </ContainerCenter>
   <FooterChristmas />
@@ -23,7 +25,7 @@ import FooterChristmas from "@/components/FooterChristmas.vue";
 import BasicCard from "@/components/BasicCard.vue";
 
 export default {
-  name: "HomeView",
+  name: "SignInView",
   components: {
     ContainerCenter,
     HeaderChristmas,
@@ -31,23 +33,16 @@ export default {
     BasicCard,
   },
   methods: {
-    goAuth() {
-      const user = this.$store.getters["user"];
-      if (user === undefined) {
-        this.$router.push({ name: "sign-in" });
-      } else {
-        this.$router.push({ name: "choose-role" });
-      }
+    backToMain() {
+      this.$router.push({ path: "/" });
     },
   },
 };
 </script>
 
 <style lang="scss">
-.secret-santa-logo {
-  > img {
-    display: inline-block;
-    max-width: 30vw;
-  }
+.card-christmas {
+  padding: 1rem;
+  max-width: 55rem;
 }
 </style>

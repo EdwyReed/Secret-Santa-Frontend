@@ -10,6 +10,10 @@
 
 body {
   background-color: #a52626;
+  background-image: url(./assets/snow03.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -21,5 +25,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
+}
+
+.pointer {
+  cursor: pointer;
 }
 </style>
