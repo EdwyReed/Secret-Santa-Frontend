@@ -24,6 +24,8 @@ import HeaderChristmas from "@/components/HeaderChristmas.vue";
 import FooterChristmas from "@/components/FooterChristmas.vue";
 import BasicCard from "@/components/BasicCard.vue";
 
+import axios from "axios";
+
 export default {
   name: "SignInView",
   components: {
@@ -33,9 +35,24 @@ export default {
     BasicCard,
     telegramLoginTemp,
   },
+  mounted() {
+    const user = this.$store.getters["user"];
+    if (user != undefined) {
+      this.$router.push({ name: "choose-role" });
+    }
+  },
   methods: {
-    onTelegramAuth(thing) {
-      console.log(thing);
+    onTelegramAuth(user) {
+      axios
+        .post("http://127.0.0.1:8000/auth", {
+          id: user.id,
+          firstname: user.first_name,
+          username: user.username,
+        })
+        .then((response) => {
+          this.$store.dispatch("setUser", response.data.user);
+          this.$router.push({ name: "choose-role" });
+        });
     },
   },
 };

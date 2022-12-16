@@ -1,10 +1,14 @@
 <template>
   <HeaderChristmas />
   <ContainerCenter>
-    <BasicCard class="rounded-max" style="font-size: 3.5rem">
+    <BasicCard
+      class="rounded-max"
+      style="font-size: 3.5rem"
+      @click="passSurvey"
+    >
       Хочу написать анкету
     </BasicCard>
-    <BasicCard class="rounded-max" style="font-size: 3.5rem">
+    <BasicCard class="rounded-max" style="font-size: 3.5rem" @click="sendGift">
       Хочу получить адрес
     </BasicCard>
   </ContainerCenter>
@@ -25,7 +29,15 @@ export default {
     FooterChristmas,
     BasicCard,
   },
-  methods: {},
+  mounted() {},
+  methods: {
+    passSurvey() {
+      this.$router.push({ path: "/pass-survey" });
+    },
+    sendGift() {
+      this.$router.push({ name: "send-gift" });
+    },
+  },
 };
 </script>
 

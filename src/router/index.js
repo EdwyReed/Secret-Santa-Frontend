@@ -4,17 +4,22 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/HomeView.vue"),
+    component: () => import("@/views/HomeView.vue"),
   },
   {
     path: "/sign-in",
     name: "sign-in",
-    component: () => import("../views/SignInView.vue"),
+    component: () => import("@/views/SignInView.vue"),
   },
   {
     path: "/choose-role",
     name: "choose-role",
-    component: () => import("../views/ChooseRoleView.vue"),
+    component: () => import("@/views/ChooseRoleView.vue"),
+  },
+  {
+    path: "/pass-survey",
+    name: "pass-survey",
+    component: () => import("@/views/SurveyView.vue"),
   },
 ];
 

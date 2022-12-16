@@ -28,7 +28,12 @@ export default {
   },
   methods: {
     goAuth() {
-      this.$router.push({ name: "sign-in" });
+      const user = this.$store.getters["user"];
+      if (user === undefined) {
+        this.$router.push({ name: "sign-in" });
+      } else {
+        this.$router.push({ name: "choose-role" });
+      }
     },
   },
 };
