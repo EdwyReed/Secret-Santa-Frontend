@@ -125,7 +125,7 @@ export default {
           {},
           {
             params: {
-              user_id: this.user.id,
+              user_id: this.user[0],
               name: this.survey.name,
               hobbies: this.survey.hobbies,
               allergic: this.survey.allergic,
