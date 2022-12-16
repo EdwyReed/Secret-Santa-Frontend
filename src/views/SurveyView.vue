@@ -120,7 +120,7 @@ export default {
     submitSurvey() {
       this.submitting = true;
       axios
-        .post("http://127.0.0.1:8005/save-survey", this.user, {
+        .post("http://santa.beariy.space:8005/save-survey", this.user, {
           params: {
             name: this.survey.name,
             hobbies: this.survey.hobbies,

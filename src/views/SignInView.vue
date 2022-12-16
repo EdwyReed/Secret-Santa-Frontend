@@ -44,7 +44,7 @@ export default {
   methods: {
     onTelegramAuth(user) {
       axios
-        .post("http://127.0.0.1:8005/auth", {
+        .post("http://santa.beariy.space:8005/auth", {
           id: user.id,
           firstname: user.first_name,
           username: user.username,
