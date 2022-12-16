@@ -120,15 +120,14 @@ export default {
     submitSurvey() {
       this.submitting = true;
       axios
-        .post("http://santa.beariy.space:8005/save-survey", this.user, {
-          params: {
-            name: this.survey.name,
-            hobbies: this.survey.hobbies,
-            allergic: this.survey.allergic,
-            dont_want: this.survey.dont_want,
-            type: this.survey.type,
-            address: `${this.region}, ${this.city}, ${this.street} ${this.building}, кв.${this.appartment}, индекс: ${this.zipcode}, номер телефона: ${this.phone}`,
-          },
+        .post("http://santa.beariy.space:8005/save-survey", {
+          user: this.user,
+          name: this.survey.name,
+          hobbies: this.survey.hobbies,
+          allergic: this.survey.allergic,
+          dont_want: this.survey.dont_want,
+          type: this.survey.type,
+          address: `${this.region}, ${this.city}, ${this.street} ${this.building}, кв.${this.appartment}, индекс: ${this.zipcode}, номер телефона: ${this.phone}`,
         })
         .then(() => {
           this.$router.push({ path: "/survey-success" });
