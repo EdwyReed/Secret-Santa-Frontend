@@ -7,7 +7,7 @@
     </span>
     <div class="survey">
       <BasicCard class="survey-content p-vertical">
-        <label for="name">1. Как к тебе обращаться?*</label>
+        <label for="name">1. Введите своё ФИО:*</label>
         <input type="text" id="name" v-model="survey.name" />
         <label for="hobbies">2. Какие у тебя увлечения и что нравится?*</label>
         <input type="text" id="hobbies" v-model="survey.hobbies" />
@@ -75,10 +75,10 @@ export default {
       region: "",
       city: "",
       street: "",
-      building: "",
-      appartment: "",
-      zipcode: "",
-      phone: " - ",
+      building: " ",
+      appartment: " ",
+      zipcode: " ",
+      phone: " ",
       submitting: false,
     };
   },
