@@ -4,8 +4,11 @@
     <BasicCard class="rounded-max pointer" @click="passSurvey">
       Хочу написать анкету
     </BasicCard>
-    <BasicCard class="rounded-max pointer inactive" @click="sendGift">
+    <BasicCard class="rounded-max pointer" @click="sendGift">
       Хочу получить адрес
+    </BasicCard>
+    <BasicCard class="rounded-max pointer" @click="mySendings">
+      Мои отправления
     </BasicCard>
   </ContainerCenter>
   <FooterChristmas />
@@ -31,7 +34,10 @@ export default {
       this.$router.push({ path: "/pass-survey" });
     },
     sendGift() {
-      this.$router.push({ name: "send-gift" });
+      this.$router.push({ path: "/send-gift" });
+    },
+    mySendings() {
+      this.$router.push({ path: "/my-sendings" });
     },
   },
 };

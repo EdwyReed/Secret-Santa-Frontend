@@ -26,6 +26,21 @@ const routes = [
     name: "survey-success",
     component: () => import("@/views/SuccessSurveyView.vue"),
   },
+  {
+    path: "/send-gift",
+    name: "send-gift",
+    component: () => import("@/views/SendGiftView.vue"),
+  },
+  {
+    path: "/my-sendings",
+    name: "my-sendings",
+    component: () => import("@/views/SendingsView.vue"),
+  },
+  {
+    path: "/confirm-sending",
+    name: "confirm-sending",
+    component: () => import("@/views/ConfirmSendingView.vue"),
+  },
 ];
 
 const router = createRouter({
