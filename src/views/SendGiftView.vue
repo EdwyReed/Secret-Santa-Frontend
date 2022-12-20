@@ -106,7 +106,7 @@ export default {
     const user = this.$store.getters["user"];
     if (user !== undefined && user !== null) {
       await axios
-        .get("http://santa.beariy.space:8010/get-sendings", {
+        .get("http://santa.beariy.space:8005/get-sendings", {
           params: {
             sender_id: user[0],
           },
@@ -115,7 +115,7 @@ export default {
           toRemove = response.data.sendings_cards;
         });
       await axios
-        .get("http://santa.beariy.space:8010/get-addresses")
+        .get("http://santa.beariy.space:8005/get-addresses")
         .then((response) => {
           allCards = response.data.addresses;
         });
@@ -136,7 +136,7 @@ export default {
       };
       axios
         .post(
-          "http://santa.beariy.space:8010/add-sending",
+          "http://santa.beariy.space:8005/add-sending",
           {},
           {
             params: {

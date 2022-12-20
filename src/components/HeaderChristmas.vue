@@ -1,7 +1,7 @@
 <template>
   <img v-if="minimal" class="header back" src="../assets/milkless-header.png" />
   <BasicCard
-    class="home-btn"
+    class="home-btn pointer"
     v-if="minimal"
     @click="this.$router.push({ name: 'choose-role' })"
   >

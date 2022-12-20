@@ -11,7 +11,7 @@ export default {
     const user = this.$store.getters["user"];
     if (user !== undefined && user !== null) {
       axios
-        .get("http://santa.beariy.space:8010/get-sendings", {
+        .get("http://santa.beariy.space:8005/get-sendings", {
           params: {
             sender_id: user[0],
           },

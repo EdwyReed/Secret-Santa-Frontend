@@ -37,7 +37,7 @@ export default {
     saveTrackCode() {
       axios
         .post(
-          "http://santa.beariy.space:8010/confirm-sending",
+          "http://santa.beariy.space:8005/confirm-sending",
           {},
           {
             params: {

@@ -124,7 +124,7 @@ export default {
   methods: {
     fetchSendings() {
       axios
-        .get("http://santa.beariy.space:8010/get-sendings", {
+        .get("http://santa.beariy.space:8005/get-sendings", {
           params: {
             sender_id: this.$store.getters["user"][0],
           },
@@ -147,7 +147,7 @@ export default {
       };
       axios
         .post(
-          "http://santa.beariy.space:8010/add-sending",
+          "http://santa.beariy.space:8005/add-sending",
           {},
           {
             params: {
@@ -163,7 +163,7 @@ export default {
     revokeSending() {
       axios
         .post(
-          "http://santa.beariy.space:8010/revoke-sending",
+          "http://santa.beariy.space:8005/revoke-sending",
           {},
           {
             params: {
