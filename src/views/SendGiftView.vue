@@ -96,7 +96,7 @@ export default {
     return {
       addresses: [],
       activeCard: null,
-      tutorial: false,
+      tutorial: true,
       openCard: false,
     };
   },

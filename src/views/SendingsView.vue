@@ -114,7 +114,7 @@ export default {
     return {
       sendings: [],
       activeCard: null,
-      tutorial: false,
+      tutorial: true,
       openCard: false,
     };
   },
